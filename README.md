@@ -1,40 +1,64 @@
-Project Description: Analyzing Google Trends Data for 'Diet', 'Gym', and 'Finance'
+# Analyzing Google Trends Data for 'Diet', 'Gym', and 'Finance'
 
-In this project, we analyze the Google Trends data for three search terms: 'diet', 'gym', and 'finance'. The data is monthly and spans several years, making it a good candidate for time series analysis to understand trends, seasonality, and correlations among these search terms. The key steps and observations in the project are outlined below.
+![Status](https://img.shields.io/badge/status-active-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 
-Steps
+In this project, we analyze the Google Trends data for three search terms: **'diet'**, **'gym'**, and **'finance'**. The data is monthly and spans several years, making it a good candidate for time series analysis to understand trends, seasonality, and correlations among these search terms. The key steps and observations in the project are outlined below.
 
-1. We start by loading the data from a CSV file and inspecting its structure.
-Initial inspection of the first few rows and the data types of the columns reveals that the 'month' column is of type object and needs to be converted to a DateTime format.
+## Steps
 
-2. Convert the 'month' column to a DateTime data type and set it as the index of the DataFrame. This allows us to handle the data as a time series.
+1. **Load the Data**
+   - We start by loading the data from a CSV file and inspecting its structure.
+   - Initial inspection of the first few rows and the data types of the columns reveals that the 'month' column is of type object and needs to be converted to a DateTime format.
 
-3.Plot the time series data for 'diet', 'gym', and 'finance' to observe the general trends and patterns.
-Observation: The plots show noticeable seasonality, particularly in the 'diet' series, which spikes every January.
-![Figure_1](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/872f5c20-ee75-4008-9399-ea7927e7f7e3)
+2. **Convert 'month' Column**
+   - Convert the 'month' column to a DateTime data type and set it as the index of the DataFrame. This allows us to handle the data as a time series.
 
-4.Calculate and plot the rolling averages for 'diet' and 'gym' with a window size of 12 months to smooth out noise and highlight trends.
-Observation: The 'diet' series shows clear yearly seasonality, while the 'gym' series shows a more consistent upward trend.
+3. **Plot Time Series Data**
+   - Plot the time series data for 'diet', 'gym', and 'finance' to observe the general trends and patterns.
+   - **Observation:** The plots show noticeable seasonality, particularly in the 'diet' series, which spikes every January.
+   - ![Figure 1](url_to_figure_1)
 
-5. Plot the rolling averages of 'diet' and 'gym' on the same figure to compare their trends.
-Observation: 'Diet' shows periodic spikes, while 'gym' demonstrates a steady increase over time, indicating different underlying patterns.
-![Figure_2](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/266795df-0ed7-4947-a510-ed150af09fc7)
+4. **Calculate and Plot Rolling Averages**
+   - Calculate and plot the rolling averages for 'diet' and 'gym' with a window size of 12 months to smooth out noise and highlight trends.
+   - **Observation:** The 'diet' series shows clear yearly seasonality, while the 'gym' series shows a more consistent upward trend.
 
-6.Apply first-order differencing to the 'diet' series to remove the trend and better investigate seasonality.
-Observation: The differenced plot highlights the seasonality with clear peaks every January, indicating a strong seasonal component.
-![Figure_3](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/0b597e95-094b-4db5-8630-8b0fd86d7ff4)
+5. **Compare Rolling Averages**
+   - Plot the rolling averages of 'diet' and 'gym' on the same figure to compare their trends.
+   - **Observation:** 'Diet' shows periodic spikes, while 'gym' demonstrates a steady increase over time, indicating different underlying patterns.
+   - ![Figure 2](url_to_figure_2)
 
-7.Compute and compare the correlation coefficients of the original series and their first-order differences.
-Observation: The original series shows negative correlation between 'diet' and 'gym', but the differenced series shows a high positive correlation, indicating that their seasonal components are correlated.
-![Figure_4](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/6960795f-fecf-44fa-a877-7a76523c6a35)
-![Figure_6](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/bceb03f1-2eea-4d91-85bc-5c922f7c4bf1)
+6. **First-Order Differencing**
+   - Apply first-order differencing to the 'diet' series to remove the trend and better investigate seasonality.
+   - **Observation:** The differenced plot highlights the seasonality with clear peaks every January, indicating a strong seasonal component.
+   - ![Figure 3](url_to_figure_3)
 
-8.Plot the autocorrelation of the 'diet' series to identify periodicity.
-Observation: The autocorrelation plot shows significant peaks at lags of 12 months, 24 months, and 36 months, confirming the yearly seasonality of the 'diet' series.
-![Figure_5](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/cac82551-f107-4eac-9306-3db57934e232)
+7. **Compute and Compare Correlations**
+   - Compute and compare the correlation coefficients of the original series and their first-order differences.
+   - **Observation:** The original series shows negative correlation between 'diet' and 'gym', but the differenced series shows a high positive correlation, indicating that their seasonal components are correlated.
+   - ![Figure 4](url_to_figure_4) ![Figure 6](url_to_figure_6)
 
-Summary of findings: 
-      Seasonality: The 'diet' series exhibits strong yearly seasonality with peaks every January, likely due to New Year's resolutions.
-      Trends: The 'gym' series shows a steady upward trend, indicating increasing interest over time.
-      Correlation: While 'diet' and 'gym' are negatively correlated when considering both trend and seasonality, their seasonal components are positively correlated.
-      Autocorrelation: The 'diet' series is autocorrelated with itself at a lag of 12 months, confirming its yearly periodicity
+8. **Plot Autocorrelation**
+   - Plot the autocorrelation of the 'diet' series to identify periodicity.
+   - **Observation:** The autocorrelation plot shows significant peaks at lags of 12 months, 24 months, and 36 months, confirming the yearly seasonality of the 'diet' series.
+   - ![Figure 5](url_to_figure_5)
+
+## Summary of Findings
+
+- **Seasonality:** The 'diet' series exhibits strong yearly seasonality with peaks every January, likely due to New Year's resolutions.
+- **Trends:** The 'gym' series shows a steady upward trend, indicating increasing interest over time.
+- **Correlation:** While 'diet' and 'gym' are negatively correlated when considering both trend and seasonality, their seasonal components are positively correlated.
+- **Autocorrelation:** The 'diet' series is autocorrelated with itself at a lag of 12 months, confirming its yearly periodicity.
+
+## Badges
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Kanch-prog/time_series_visualization) ![GitHub issues](https://img.shields.io/github/issues/Kanch-prog/time_series_visualization) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Kanch-prog/time_series_visualization)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+- **Author:** Your Name
+- **Email:** your.email@example.com
+- **GitHub:** [your_username](https://github.com/Kanch-prog)
