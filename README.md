@@ -16,7 +16,7 @@ In this project, we analyze the Google Trends data for three search terms: **'di
 3. **Plot Time Series Data**
    - Plot the time series data for 'diet', 'gym', and 'finance' to observe the general trends and patterns.
    - **Observation:** The plots show noticeable seasonality, particularly in the 'diet' series, which spikes every January.
-   - ![Figure 1](url_to_figure_1)
+   - ![Figure_1](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/d7719b69-f9c4-442f-b6b3-539ac5dffb5f)
 
 4. **Calculate and Plot Rolling Averages**
    - Calculate and plot the rolling averages for 'diet' and 'gym' with a window size of 12 months to smooth out noise and highlight trends.
@@ -25,22 +25,23 @@ In this project, we analyze the Google Trends data for three search terms: **'di
 5. **Compare Rolling Averages**
    - Plot the rolling averages of 'diet' and 'gym' on the same figure to compare their trends.
    - **Observation:** 'Diet' shows periodic spikes, while 'gym' demonstrates a steady increase over time, indicating different underlying patterns.
-   - ![Figure 2](url_to_figure_2)
+   - ![Figure_2](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/21d87f7c-1222-4305-a66b-7634b926892a)
 
 6. **First-Order Differencing**
    - Apply first-order differencing to the 'diet' series to remove the trend and better investigate seasonality.
    - **Observation:** The differenced plot highlights the seasonality with clear peaks every January, indicating a strong seasonal component.
-   - ![Figure 3](url_to_figure_3)
+   - ![Figure_3](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/8e413fd6-31d9-43cb-9f44-147a45290f66)
 
 7. **Compute and Compare Correlations**
    - Compute and compare the correlation coefficients of the original series and their first-order differences.
    - **Observation:** The original series shows negative correlation between 'diet' and 'gym', but the differenced series shows a high positive correlation, indicating that their seasonal components are correlated.
-   - ![Figure 4](url_to_figure_4) ![Figure 6](url_to_figure_6)
+   - ![Figure_4](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/1c3fbce4-2758-4234-8cfe-712e5d04ead8)
+   - ![Figure_6](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/d7a0ebbb-7128-411d-93f0-82f00b76b5b6)
 
 8. **Plot Autocorrelation**
    - Plot the autocorrelation of the 'diet' series to identify periodicity.
    - **Observation:** The autocorrelation plot shows significant peaks at lags of 12 months, 24 months, and 36 months, confirming the yearly seasonality of the 'diet' series.
-   - ![Figure 5](url_to_figure_5)
+   - ![Figure_5](https://github.com/Kanch-prog/time_series_visualization/assets/121807277/329f33e1-d236-4136-a66b-dc50e1e8373c)
 
 ## Summary of Findings
 
@@ -59,6 +60,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Author:** Your Name
-- **Email:** your.email@example.com
-- **GitHub:** [your_username](https://github.com/Kanch-prog)
+- **Author:** Kanchana.Karuanrathna
+- **Email:** kanchana.karuanrathna15@gmail.com
+- **GitHub:** [Kanch-prog](https://github.com/Kanch-prog)
